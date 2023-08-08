@@ -1,11 +1,25 @@
 RTMP Dump v2.4
+
+Fork from <http://git.ffmpeg.org/rtmpdump> integrated with srs.
+
+Add implementation of FLV format.
+
+Supports Format
+----------------
+
+Audio Format: AAC, Opus
+Video Format: H264, H265
+
+Original README
+----------------
+
 (C) 2009 Andrej Stepanchuk
 (C) 2009-2011 Howard Chu
 (C) 2010 2a665470ced7adb7156fcef47f8199a6371c117b8a79e399a2771e0b36384090
 (C) 2011 33ae1ce77301f4b4494faaa5f609f3c48b9dcf82
 License: GPLv2
 librtmp license: LGPLv2.1
-http://rtmpdump.mplayerhq.hu/
+<http://rtmpdump.mplayerhq.hu/>
 
 To compile type "make" with SYS=<platform name>, e.g.
 
@@ -55,7 +69,6 @@ For Polar SSL you must have version 1.0.0 or newer.
 Credit goes to team boxee for the XBMC RTMP code originally used in RTMPDumper.
 The current code is based on the XBMC code but rewritten in C by Howard Chu.
 
-
 SWF Verification
 ----------------
 
@@ -78,7 +91,6 @@ Now generate the hash
 and use the --swfhash "01234..." option to pass it.
 
 e.g. $ ./rtmpdump --swfhash "123456..." --swfsize 987...
-
 
 Connect Parameters
 ------------------
@@ -107,9 +119,9 @@ Objects may be added sequentially:
 or nested:
   -C O:1 -C NS:code:hello -C NO:extra:1 -C NS:data:stuff -C O:0 -C O:0
 
-
 Building OpenSSL 0.9.8k
 -----------------------
+
 arm:
 ./Configure -DL_ENDIAN --prefix=`pwd`/armlibs linux-generic32
 
@@ -123,15 +135,15 @@ make && make install_sw
 OpenSSL cross-compiling can be a difficult beast.
 
 Precompiled OpenSSL binaries for Windows are available on
-http://www.slproweb.com/products/Win32OpenSSL.html
+<http://www.slproweb.com/products/Win32OpenSSL.html>
 
 If you're just running a pre-built Windows rtmpdump binary, then all you
 need is the "Light" installer. If you want to compile rtmpdump yourself,
 you'll need the full installer.
 
-
 Example Servers
 ---------------
+
 Three different types of servers are also present in this distribution:
  rtmpsrv - a stub server
  rtmpsuck - a transparent proxy
